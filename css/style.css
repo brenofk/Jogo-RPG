@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.game-board{
+.game-board {
     width: 80%;
     height: 500px;
     border: 1px solid #333;
@@ -17,10 +17,24 @@
 .tubo {
     position: absolute;
     bottom: 0;
-    width: 80px;
+    width: 65px;
     right: -80px;
-    animation: tubo-animation 2s infinite linear;
+    left: 240px;
+    /*animation: tubo-animation 4s infinite linear;8*/
 }
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 129px;
+   
+}
+
+.jump {
+    animation:  jump 500ms  ease-out;
+}
+
 @keyframes tubo-animation {
     from {
         right: -80px;
@@ -32,3 +46,27 @@
 
     }
 }
+
+@keyframes jump {
+
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+    
+    50% {
+            bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+}
+   
+    100% {
+        bottom: 0;
+    }
+}
+
