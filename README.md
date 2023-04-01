@@ -1,2 +1,2 @@
-# Jogo-RPG
+# Jogo
 Meu primeiro jogo com programação.
