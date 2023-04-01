@@ -5,30 +5,27 @@
 }
 
 .game-board {
-    width: 80%;
+    width: 100%;
     height: 500px;
-    border: 1px solid #333;
+    border-bottom: 15px solid rgb(35, 160, 35);
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-
+    background: linear-gradient(#87ceeb, #e0f6e0);
 }
 
 .tubo {
     position: absolute;
     bottom: 0;
-    width: 65px;
-    right: -80px;
-    left: 240px;
-    /*animation: tubo-animation 4s infinite linear;8*/
+    width: 80px;
+    animation: tubo-animation 1.5s infinite linear;
 }
 
 .mario {
     width: 150px;
     position: absolute;
-    bottom: 0;
-    left: 129px;
-   
+    bottom: 0px;
+
 }
 
 .jump {
