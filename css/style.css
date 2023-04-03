@@ -11,34 +11,46 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(#87ceeb, #e0f6e0);
+    background: linear-gradient(#87ceeb, #E0fFF0);
 }
 
 .tubo {
     position: absolute;
-    bottom: 0;
-    width: 80px;
+    bottom: -10px;
+    width: 120px;
     animation: tubo-animation 1.5s infinite linear;
+    
+    
+
 }
 
 .mario {
-    width: 150px;
+    width: 90px;
     position: absolute;
     bottom: 0px;
 
 }
 
 .jump {
-    animation:  jump 500ms  ease-out;
+    animation: jump 500ms  ease-out;
 }
 
+.nuvens {
+    width: 550px;
+    position: absolute;
+    animation: nuvens-animation 20s infinite linear;
+    right: 0 auto;
+    
+}
 @keyframes tubo-animation {
     from {
+        
         right: -80px;
 
 
     }   
     to {
+        
         right: 100%;
 
     }
@@ -64,6 +76,17 @@
    
     100% {
         bottom: 0;
+    }
+}
+
+@keyframes nuvens-animation {
+    from {
+     right: -550px;
+    }
+    
+    to {
+       right: 100%;
+       
     }
 }
 

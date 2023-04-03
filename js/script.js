@@ -11,36 +11,28 @@ const jump = () => {
 }   
 
 const loop = setInterval(() => {
-    
-    console.log("loop")
 
     const tuboPosition = tubo.offsetLeft;
-    const marioPosition = +window.getComputedStyle(mario).bottom.replace("px","");
+    const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
 
-    console.log(marioPosition);
+    console.log(tuboPosition)
     
+    if (tuboPosition <= 120 && tuboPosition && marioPosition < 90) {
 
-   
-    if (tuboPosition <= 120 && tuboPosition > 0 && marioPosition < 80 ) {
+        tubo.style.animation = 'none'
+        tubo.style.left = '${tuboPosition}px';
 
-        tubo.style.animation = "none";
-        tubo.style.left = "${tuboPosition}px";
-
-        mario.style.animation = "none";
-        mario.style.bottom = "${marioPosition}px";
+        mario.style.animation = ('none');
+        mario.style.bottom = '${marioPosition}px'; 
         
-        mario.src = " ./images/game-over.png";
-        mario.style.width = "75px"
-        mario.style.marginleft = "50px"
-
+        mario.src = "./images/mario-over.png"
+        
+        mario.style.width = "75px";
+        mario.style.marginLeft = "-35px"
+       
         clearInterval(loop);
-        
-
-
-   
-   
     }
-}, 10)      
+},10)      
 
     document.addEventListener('keydown', jump);
 
